@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cornerstone Clinician Complete Tutorial</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #27ae60;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #27ae60;
+            margin-top: 30px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 20px;
+        }
+        .section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .desktop-section {
+            border-left: 4px solid #3498db;
+        }
+        .mobile-section {
+            border-left: 4px solid #27ae60;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .pro-tips {
+            background: #f0f9ff;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .image-item {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            background: white;
+        }
+        .image-caption {
+            font-size: 14px;
+            color: #666;
+            margin-top: 10px;
+            font-style: italic;
+        }
+        .feature-list {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        .feature-list ul {
+            margin: 10px 0;
+            padding-left: 25px;
+        }
+        .feature-list li {
+            margin: 8px 0;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .success-indicator {
+            background: #d4edda;
+            color: #155724;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            border: 1px solid #c3e6cb;
+        }
+        .warning {
+            background: #fff3cd;
+            color: #856404;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            border: 1px solid #ffeaa7;
+        }
+        .mobile-screen {
+            max-width: 300px;
+            margin: 0 auto;
+            border: 2px solid #333;
+            border-radius: 20px;
+            padding: 10px;
+            background: #fff;
+        }
+        .toc {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .toc ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        .toc > ul {
+            padding-left: 0;
+        }
+        .toc li {
+            margin: 8px 0;
+        }
+        .badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        .badge-desktop {
+            background: #3498db;
+            color: white;
+        }
+        .badge-mobile {
+            background: #27ae60;
+            color: white;
+        }
+        .step-number {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background: #27ae60;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>📚 Cornerstone Clinician Complete Tutorial</h1>
+    
+    <p><strong>A comprehensive guide for creating, managing, and customizing exercises and patient cases across desktop and mobile platforms.</strong></p>
+    
+    <div class="toc">
+        <h2>Table of Contents</h2>
+        <ul>
+            <li>📖 <a href="#overview">Overview</a></li>
+            <li>🖥️ <a href="#desktop">Desktop Platform</a> <span class="badge badge-desktop">DESKTOP</span>
+                <ul>
+                    <li><a href="#desktop-exercises">How to Add and Cancel an Exercise</a></li>
+                    <li><a href="#desktop-cases">Create and Manage Patient Cases and Schedules</a></li>
+                    <li><a href="#desktop-templates">Edit and Add Exercises to a Template</a></li>
+                    <li><a href="#desktop-favorites">Manage Exercise Favorites and All Exercises</a></li>
+                </ul>
+            </li>
+            <li>📱 <a href="#mobile">Mobile Platform</a> <span class="badge badge-mobile">MOBILE</span>
+                <ul>
+                    <li><a href="#mobile-cases">Creating New Cases and Schedules</a></li>
+                    <li><a href="#mobile-schedules">Managing Schedule Details</a></li>
+                    <li><a href="#mobile-library">Exercise Library and Search</a></li>
+                    <li><a href="#mobile-adding">Adding Exercises to Schedules</a></li>
+                    <li><a href="#mobile-editing">Editing Exercises</a></li>
+                    <li><a href="#mobile-media">Media Capture and Management</a></li>
+                    <li><a href="#mobile-patients">Patient Management</a></li>
+                </ul>
+            </li>
+            <li>💡 <a href="#best-practices">Best Practices</a></li>
+            <li>🔧 <a href="#troubleshooting">Troubleshooting</a></li>
+        </ul>
+    </div>
+
+    <div id="overview" class="section">
+        <h2>Overview</h2>
+        <p>This comprehensive tutorial covers the Cornerstone system for both desktop and mobile platforms. It explains how to create and edit exercises, manage patient cases and schedules, modify templates, and use favorites efficiently to optimize treatment workflows.</p>
+        
+        <div class="feature-list">
+            <strong>Key Capabilities:</strong>
+            <ul>
+                <li>✅ Create and manage patient cases across platforms</li>
+                <li>✅ Design custom exercise programs with media support</li>
+                <li>✅ Schedule and track patient progress</li>
+                <li>✅ Use templates for efficient workflow</li>
+                <li>✅ Capture exercise demonstrations on mobile</li>
+                <li>✅ Synchronize data between desktop and mobile</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Desktop Platform Section -->
+    <div id="desktop" class="section desktop-section">
+        <h2>🖥️ Desktop Platform</h2>
+        <p>The desktop platform provides comprehensive features for detailed patient management and exercise programming.</p>
+
+        <h3 id="desktop-exercises">1. How to Add and Cancel an Exercise</h3>
+        <p>Learn how to add exercises to a patient program, adjust parameters such as sets, reps, and duration, and cancel an exercise when no longer needed.</p>
+        <p><strong>Tutorial:</strong> <a href="https://scribehow.com/viewer/How_to_Add_and_Cancel_an_Exercise__2y-NEbqxQNKR-qPV8076EA" target="_blank">View Step-by-Step Guide</a></p>
+        
+        <h3 id="desktop-cases">2. Create and Manage Patient Cases and Schedules</h3>
+        <p>Understand how to create new patient cases, assign them to clinicians, and manage their appointment schedules within the system for seamless coordination.</p>
+        <p><strong>Tutorial:</strong> <a href="https://scribehow.com/viewer/Create_and_Manage_Patient_Cases_and_Schedules__hAfijdsKRq-DToEXKJt60g" target="_blank">View Step-by-Step Guide</a></p>
+        
+        <h3 id="desktop-templates">3. Edit and Add Exercises to a Template</h3>
+        <p>Explore how to customize templates by editing existing exercises or adding new ones, ensuring consistency and personalization across patient programs.</p>
+        <p><strong>Tutorial:</strong> <a href="https://scribehow.com/viewer/Edit_and_Add_Exercises_to_a_Template__ht9dfUxASZ2aQSGnKoqlFg" target="_blank">View Step-by-Step Guide</a></p>
+        
+        <h3 id="desktop-favorites">4. Manage Exercise Favorites and All Exercises</h3>
+        <p>Learn how to organize your favorite exercises, browse the entire exercise library, and streamline your workflow using categorized collections.</p>
+        <p><strong>Tutorial:</strong> <a href="https://scribehow.com/viewer/Manage_Exercise_Favorites_and_All_Exercises__dHk0jZ3rSZi6_AKOXsbO5w" target="_blank">View Step-by-Step Guide</a></p>
+    </div>
+
+    <!-- Mobile Platform Section -->
+    <div id="mobile" class="section mobile-section">
+        <h2>📱 Mobile Platform</h2>
+        <p>The mobile app provides full access to patient management capabilities from your mobile device, optimized for on-the-go clinical work.</p>
+
+        <h3 id="mobile-cases">1. Creating New Cases and Schedules</h3>
+        <p>The mobile app allows you to create new patient cases and schedules directly from your device.</p>
+        
+        <div class="feature-list">
+            <strong>Steps to Create a New Case:</strong>
+            <ol>
+                <li><span class="step-number">1</span> Navigate to the patient profile</li>
+                <li><span class="step-number">2</span> Tap "Add Case" or the "+" button</li>
+                <li><span class="step-number">3</span> Enter the Case Name (e.g., "case demo 123")</li>
+                <li><span class="step-number">4</span> Enter the Schedule Name (e.g., "schedule 123")</li>
+                <li><span class="step-number">5</span> Set Schedule Duration:
+                    <ul>
+                        <li>Select Start Date (e.g., Nov 10, 2025)</li>
+                        <li>Select End Date (e.g., Feb 10, 2026)</li>
+                    </ul>
+                </li>
+                <li><span class="step-number">6</span> Tap "Create" to save the new case and schedule</li>
+            </ol>
+        </div>
+
+
+
+        <h3 id="mobile-schedules">2. Managing Schedule Details</h3>
+        <p>View and edit comprehensive schedule information including exercises, frequency, and patient assignments.</p>
+        
+        <div class="feature-list">
+            <strong>Schedule Details View Contains:</strong>
+            <ul>
+                <li>Schedule name and description</li>
+                <li>Associated case information (e.g., "Ash - Test Case")</li>
+                <li>Patient assignment (e.g., "Demo User")</li>
+                <li>Notes section for clinical observations</li>
+                <li>Start and End dates with calendar icons</li>
+                <li>Exercise list with count indicator</li>
+                <li>Individual exercise cards showing:
+                    <ul>
+                        <li>Exercise name (e.g., "Trunk rotation")</li>
+                        <li>Weekly frequency selector (MON-SUN)</li>
+                        <li>Exercise number indicator</li>
+                        <li>Expand/collapse controls</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="success-indicator">
+            ✅ <strong>Success Indicator:</strong> "Schedule updated successfully" - Green checkmark confirmation appears after saving changes
+        </div>
+
+        <h3 id="mobile-library">3. Exercise Library and Search</h3>
+        <p>The Exercise Library provides comprehensive access to all available exercises with search and template capabilities.</p>
+        
+        <div class="image-grid">
+            <div class="image-item">
+                <h4>Search Tab</h4>
+                <ul>
+                    <li>Search bar with placeholder text</li>
+                    <li>"Create New Exercise" button</li>
+                    <li>Search button for query execution</li>
+                    <li>Empty state message guidance</li>
+                </ul>
+            </div>
+            <div class="image-item">
+                <h4>Templates Tab</h4>
+                <ul>
+                    <li>Pre-configured exercise sets</li>
+                    <li>Common treatment protocols</li>
+                    <li>Standardized combinations</li>
+                    <li>Quick access to favorites</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3 id="mobile-adding">4. Adding Exercises to Schedules</h3>
+        <p>Add exercises with full customization of parameters and scheduling.</p>
+        
+        <div class="feature-list">
+            <strong>Exercise Addition Workflow:</strong>
+            
+            <h4>Step 1: Search and Select</h4>
+            <ul>
+                <li>Use the Exercise Library search function</li>
+                <li>Enter exercise name (e.g., "demo exercise")</li>
+                <li>Select from search results or create new</li>
+            </ul>
+            
+            <h4>Step 2: Media Addition (Optional)</h4>
+            <ul>
+                <li>Prompted with "Add Media?" dialog</li>
+                <li>Options: "Yes" or "No"</li>
+                <li>If Yes: Access Capture Media interface
+                    <ul>
+                        <li>Photo mode (default)</li>
+                        <li>Video mode toggle</li>
+                        <li>Voice instruction recording capability</li>
+                        <li>Add instructions feature</li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <h4>Step 3: Configure Exercise Instructions</h4>
+            <ul>
+                <li>Add multiple instruction steps</li>
+                <li>Each instruction can be individually managed</li>
+                <li>Delete option for each instruction</li>
+                <li>"Use Media" button to attach captured content</li>
+            </ul>
+            
+            <h4>Step 4: Schedule Configuration</h4>
+            <ul>
+                <li>Select active days (MON-SUN)</li>
+                <li>Days highlighted in green when selected</li>
+                <li>"Everyday" checkbox for quick selection</li>
+                <li>"Add Exercise" button to confirm</li>
+            </ul>
+        </div>
+
+        <h3 id="mobile-editing">5. Editing Exercises</h3>
+        <p>Comprehensive exercise editing capabilities with sets, reps, and frequency management.</p>
+        
+        <div class="feature-list">
+            <strong>Edit Exercise Interface:</strong>
+            
+            <h4>Exercise Instructions Section</h4>
+            <ul>
+                <li>Listed instructions (e.g., "Add Instruction 1", "Add Instruction2")</li>
+                <li>Reorderable list interface</li>
+            </ul>
+            
+            <h4>Sets & Reps Configuration</h4>
+            <ul>
+                <li>Set counter display (e.g., "2 sets")</li>
+                <li>"Add Set" button</li>
+                <li>Individual set management:
+                    <ul>
+                        <li>Set number</li>
+                        <li>Reps counter with +/- controls</li>
+                        <li>Delete button per set</li>
+                    </ul>
+                </li>
+                <li>Default: 10 reps per set</li>
+            </ul>
+            
+            <h4>Frequency Settings</h4>
+            <ul>
+                <li>Day count indicator (e.g., "3 days")</li>
+                <li>Weekly schedule selector</li>
+                <li>Selected days highlighted in green</li>
+                <li>Unselected days in gray</li>
+            </ul>
+            
+            <h4>Action Buttons</h4>
+            <ul>
+                <li><strong>Cancel:</strong> Discard changes</li>
+                <li><strong>Save Changes:</strong> Apply modifications</li>
+            </ul>
+        </div>
+
+        <h3 id="mobile-media">6. Media Capture and Management</h3>
+        <p>Integrated media capture for exercise demonstrations and instructions.</p>
+        
+        <div class="feature-list">
+            <strong>Capture Media Features:</strong>
+            
+            <h4>Interface Elements</h4>
+            <ul>
+                <li>Camera viewfinder</li>
+                <li>Photo/Video toggle switch</li>
+                <li>Capture button</li>
+                <li>Voice recording option (microphone icon)</li>
+            </ul>
+            
+            <h4>Instruction Management</h4>
+            <ul>
+                <li>Exercise Instructions list</li>
+                <li>Item count display (e.g., "2 items")</li>
+                <li>Individual instruction entries</li>
+                <li>Delete option (X) for each instruction</li>
+                <li>Delete button for removing media</li>
+                <li>"Use Media" button for confirmation</li>
+            </ul>
+        </div>
+        
+        <div class="success-indicator">
+            ✅ <strong>Success Confirmation:</strong> "Exercise added to schedule" - Green banner appears after successful addition
+        </div>
+
+        <h3 id="mobile-patients">7. Patient Management</h3>
+        <p>Access and manage your patient roster with comprehensive filtering and organization.</p>
+        
+        <div class="feature-list">
+            <strong>My Patients View:</strong>
+            <ul>
+                <li>Patient count display (e.g., "4 patients")</li>
+                <li>Search bar: "Search patients by name"</li>
+                <li>Alphabetical grouping with initials</li>
+                <li>Patient cards displaying:
+                    <ul>
+                        <li>Full name</li>
+                        <li>Email address</li>
+                        <li>Age and gender</li>
+                        <li>Integration badges (e.g., "MYFITNESSPAL", "Apple Health")</li>
+                        <li>Navigation arrow for details</li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <strong>Patient Profile Contains:</strong>
+            <h4>Patient Information Section</h4>
+            <ul>
+                <li>Email</li>
+                <li>Phone number (formatted)</li>
+                <li>Gender</li>
+                <li>Age (calculated)</li>
+            </ul>
+            
+            <h4>Cases and Schedules Section</h4>
+            <ul>
+                <li>Case count indicator (e.g., "2 Cases")</li>
+                <li>"Add Case" button</li>
+                <li>Expandable case cards showing:
+                    <ul>
+                        <li>Case name</li>
+                        <li>Schedule count</li>
+                        <li>View/expand controls</li>
+                    </ul>
+                </li>
+                <li>Individual schedules with:
+                    <ul>
+                        <li>Schedule name</li>
+                        <li>Date range</li>
+                        <li>Status indicators</li>
+                    </ul>
+                </li>
+                <li>Empty state: "No schedules assigned to this case"</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Best Practices Section -->
+    <div id="best-practices" class="section">
+        <h2>💡 Best Practices</h2>
+        
+        <div class="pro-tips">
+            <h3>Desktop Platform Tips</h3>
+            <ul>
+                <li>✨ Use templates for recurring treatment plans to save setup time</li>
+                <li>✨ Regularly review inactive schedules and update templates with new exercises</li>
+                <li>✨ Use Advanced Customization only when patient-specific instructions differ</li>
+                <li>✨ Keep your favorites list updated to quickly access common routines</li>
+                <li>✨ When editing templates, use duplicate copies instead of altering shared ones</li>
+            </ul>
+        </div>
+        
+        <div class="pro-tips">
+            <h3>Mobile Platform Tips</h3>
+            
+            <h4>For Case Creation</h4>
+            <ul>
+                <li>📝 Use descriptive case names that include condition or treatment type</li>
+                <li>📝 Set realistic schedule durations with buffer time</li>
+                <li>📝 Add comprehensive notes at creation for better tracking</li>
+            </ul>
+            
+            <h4>For Exercise Management</h4>
+            <ul>
+                <li>📸 Always add media for complex exercises</li>
+                <li>📸 Include step-by-step instructions for patient clarity</li>
+                <li>📸 Review and update frequency based on patient progress</li>
+                <li>📸 Use templates for common treatment protocols</li>
+            </ul>
+            
+            <h4>For Schedule Optimization</h4>
+            <ul>
+                <li>📅 Start with fewer exercises and gradually increase</li>
+                <li>📅 Consider patient availability when setting schedules</li>
+                <li>📅 Use the notes field for progression tracking</li>
+                <li>📅 Regularly review and adjust based on outcomes</li>
+            </ul>
+            
+            <h4>For Mobile Workflow</h4>
+            <ul>
+                <li>🔄 Sync before patient sessions to ensure latest data</li>
+                <li>🔄 Capture media in good lighting conditions</li>
+                <li>🔄 Save changes frequently to prevent data loss</li>
+                <li>🔄 Use search function to quickly locate exercises</li>
+            </ul>
+        </div>
+        
+        <div class="pro-tips">
+            <h3>Cross-Platform Synchronization</h3>
+            <ul>
+                <li>🔗 Always ensure sync is complete before switching devices</li>
+                <li>🔗 Use desktop for detailed planning and mobile for in-session updates</li>
+                <li>🔗 Review changes made on mobile from desktop for quality control</li>
+                <li>🔗 Maintain consistent naming conventions across platforms</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Troubleshooting Section -->
+    <div id="troubleshooting" class="section">
+        <h2>🔧 Troubleshooting</h2>
+        
+        <h3>Common Issues and Solutions</h3>
+        
+        <div class="warning">
+            <h4>⚠️ Schedule Not Saving</h4>
+            <ul>
+                <li>Ensure all required fields are completed</li>
+                <li>Check network connectivity</li>
+                <li>Verify date range is valid (end date after start date)</li>
+            </ul>
+        </div>
+        
+        <div class="warning">
+            <h4>⚠️ Exercise Search Not Working</h4>
+            <ul>
+                <li>Clear search field and retry</li>
+                <li>Check spelling of exercise names</li>
+                <li>Use partial terms for broader results</li>
+                <li>Verify network connection</li>
+            </ul>
+        </div>
+        
+        <div class="warning">
+            <h4>⚠️ Media Upload Failing</h4>
+            <ul>
+                <li>Check device storage availability</li>
+                <li>Ensure camera permissions are granted</li>
+                <li>Reduce video quality if file size is large</li>
+                <li>Try photo instead of video for basic demonstrations</li>
+            </ul>
+        </div>
+        
+        <div class="warning">
+            <h4>⚠️ Cannot Add Exercise to Schedule</h4>
+            <ul>
+                <li>Verify schedule is not locked/completed</li>
+                <li>Check if exercise already exists in schedule</li>
+                <li>Ensure schedule date range is current</li>
+                <li>Confirm user has edit permissions</li>
+            </ul>
+        </div>
+        
+        <div class="warning">
+            <h4>⚠️ Sync Issues Between Platforms</h4>
+            <ul>
+                <li>Check internet connection on both devices</li>
+                <li>Log out and log back in to force sync</li>
+                <li>Wait 30 seconds between platform switches</li>
+                <li>Clear app cache if persistent issues</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Navigation and UI Elements -->
+    <div class="section">
+        <h2>🎨 Navigation and UI Elements</h2>
+        
+        <h3>Color Coding</h3>
+        <div class="feature-list">
+            <ul>
+                <li><span style="color: #27ae60;">⬤ Green</span>: Active elements, success messages, action buttons</li>
+                <li><span style="color: #87CEEB;">⬤ Light Blue</span>: Schedule duration sections, selected days</li>
+                <li><span style="color: #808080;">⬤ Gray</span>: Inactive or disabled elements</li>
+                <li><span style="color: #000;">⬤ White</span>: Primary content areas</li>
+            </ul>
+        </div>
+        
+        <h3>Status Indicators</h3>
+        <ul>
+            <li>🔋 Battery indicator (100%)</li>
+            <li>📶 Network connectivity bars</li>
+            <li>🕐 Time display (24-hour format)</li>
+            <li>✅ Success banners with checkmark icons</li>
+        </ul>
+        
+        <h3>Interactive Elements</h3>
+        <ul>
+            <li>▼ Dropdown arrows for date selection</li>
+            <li>🔄 Toggle switches for Photo/Video</li>
+            <li>➕ Plus and ➖ minus buttons for adjustments</li>
+            <li>✖️ X buttons for closing or deleting</li>
+            <li>✏️ Edit pencil icons</li>
+            <li>⟩ Expand/collapse chevrons</li>
+        </ul>
+    </div>
+
+    <!-- Security and Privacy -->
+    <div class="section">
+        <h2>🔒 Security and Privacy</h2>
+        
+        <div class="warning">
+            <strong>Important Security Guidelines:</strong>
+            <ul>
+                <li>🔐 Always log out when finished</li>
+                <li>🔐 Do not share device with unlocked app</li>
+                <li>🔐 Ensure patient data is not visible to others</li>
+                <li>🔐 Use secure networks for data synchronization</li>
+                <li>🔐 Follow HIPAA compliance guidelines</li>
+                <li>🔐 Enable two-factor authentication when available</li>
+                <li>🔐 Regular password updates recommended</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Quick Reference -->
+    <div class="section">
+        <h2>📋 Quick Reference</h2>
+        
+        <h3>Essential Keyboard Shortcuts (Desktop)</h3>
+        <table style="width: 100%; border-collapse: collapse;">
+            <tr style="background: #f8f9fa;">
+                <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Action</th>
+                <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Shortcut</th>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border: 1px solid #ddd;">Save</td>
+                <td style="padding: 10px; border: 1px solid #ddd;"><code>Ctrl/Cmd + S</code></td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border: 1px solid #ddd;">New Exercise</td>
+                <td style="padding: 10px; border: 1px solid #ddd;"><code>Ctrl/Cmd + N</code></td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border: 1px solid #ddd;">Search</td>
+                <td style="padding: 10px; border: 1px solid #ddd;"><code>Ctrl/Cmd + F</code></td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border: 1px solid #ddd;">Cancel/Close</td>
+                <td style="padding: 10px; border: 1px solid #ddd;"><code>Esc</code></td>
+            </tr>
+        </table>
+        
+        <h3>Mobile Gestures</h3>
+        <ul>
+            <li>👆 <strong>Tap:</strong> Select items</li>
+            <li>👆👆 <strong>Double tap:</strong> Quick edit</li>
+            <li>↔️ <strong>Swipe left/right:</strong> Navigate between screens</li>
+            <li>↕️ <strong>Swipe down:</strong> Refresh data</li>
+            <li>🤏 <strong>Pinch:</strong> Zoom in/out on media</li>
+            <li>👆➡️ <strong>Long press:</strong> Access context menu</li>
+        </ul>
+    </div>
+
+    <!-- Footer -->
+    <div class="section">
+        <h2>📞 Support and Resources</h2>
+        <p>For additional support or advanced features:</p>
+        <ul>
+            <li>📧 Contact technical support: ash.singla@devyuga.com</li>
+
+        </ul>
+        <p><strong>Version:</strong> 1.0 | <strong>Last Updated:</strong> November 2025</p>
+    </div>
+</body>
+</html>
